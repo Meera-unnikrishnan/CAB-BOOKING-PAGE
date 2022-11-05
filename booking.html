@@ -34,7 +34,8 @@
 		</a>
 	</nav> -->
 	<!-- Booking -->
-	<a href="index.html" style="color: rgb(13, 38, 118);">Home</a>
+	<a href="index.html"  class="btn btn-warning btn-lg"  style="color: rgb(13, 38, 118);">Home</a>
+	
 	<img src="cab3.jpg" style="float:right;background-size: cover; margin-top: 80px;" alt="" height:50px; width:50px;>
 	<h1 style="color:rgb(21, 21, 96);text-align: center;">Booking form</h1>
 	<div class="parent">
@@ -81,7 +82,12 @@
 							</div>
 							<div>
 								<input type="time" id="timepicker" name="Time" class="form-control form-control-lg" class="timepicker form-control"
-									placeholder="Pick-up Time" value=""><br><br>
+									placeholder="Pick-up Time" value=""> 
+									<select> 
+									<option>AM</option>
+									<option>PM</option>
+									</select>
+									<br><br>
 							</div>
 						</div>
 						<div>
@@ -108,15 +114,15 @@
 								</select><br><br>
 							</div>
 							<div>
-								<select id="direction" onchange="change_country(this.value)" class="frm-field required">
+								<select id="direction" class="btn btn-light btn-lg"onchange="change_country(this.value)" class="frm-field required">
 									<option value="">Direction</option>
 									<option value="">One Way</option>
 									<option value="">Return</option>
 								</select><br><br>
 							</div>
 							<div>
-								<input type="submit" value="Book Now" onClick="javascript:saveData();" id="submit">
-								<input type="reset" value="Reset">
+								<input type="submit" class="btn btn-light btn-lg" value="Book Now" onClick="javascript:saveData();" id="submit">
+								<input type="reset" class="btn btn-light btn-lg" value="Reset">
 
 					</form>
 				</div>
