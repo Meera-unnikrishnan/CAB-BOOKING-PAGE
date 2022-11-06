@@ -23,6 +23,9 @@
 		margin-top: 2px;
 		;
 	}
+	#bookingform input:invalid{
+            border-color: red;
+        }
 </style>
 <link href="css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
@@ -43,7 +46,7 @@
 			<div>
 				<h2 style="color:white">Personal Details</h2>
 				<div>
-					<form name="bookingform" action="print.html" method="post" onsubmit="return validate()"
+					<form name="bookingform" action="index.html" method="post" onsubmit="return validate()"
 						cellspacing="6" cellpadding="2">
 						<div>
 							<div>
