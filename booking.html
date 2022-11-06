@@ -140,27 +140,27 @@
 		function saveData() {
 
 			alert("saved successfully");
-			var firstName = document.getElementById('fullName').value;
-			var phone = document.getElementById('phone').value;
-			var email = document.getElementById('email').value;
-			var cab = document.getElementById("cab").value;
-            var date = document.getElementById("date").value;
-			var time = document.getElementById("timepicker").value;
-			var plocation = document.getElementById("plocation").value;
-            var dlocation = document.getElementById("dlocation").value;	
-			var passengers = document.getElementById("passengers").value;	
-			var direction = document.getElementById("direction").value;	
+			var firstName = document.forms[bookingform]['fullName'].value;
+			var phone = document.forms[bookingform]['phone'].value;
+			var email = document.forms[bookingform]['email'].value;
+			var cab = document.forms[bookingform]["cab"].value;
+                        var date = document.forms[bookingform]["date"].value;
+			var time = document.forms[bookingform]["timepicker"].value;
+			var plocation = document.forms[bookingform]["plocation"].value;
+                        var dlocation = document.forms[bookingform]["dlocation"].value;	
+			var passengers = document.forms[bookingform]["passengers"].value;	
+			var direction = document.forms[bookingform]["direction"].value;	
 
-			localStorage.setItem("fullName", fullName);
-			localStorage.setItem("phone", phone);
-			localStorage.setItem("email", email);
-			localStorage.setItem("cab",cab);
-			localStorage.setItem("date",date);
-			localStorage.setItem("time",time);
-			localStorage.setItem("plocation",plocation);
-			localStorage.setItem("dlocation",dlocation);
-			localStorage.setItem("passenger",passenger);
-			localStorage.setItem("direction",direction);
+// 			localStorage.setItem("fullName", fullName);
+// 			localStorage.setItem("phone", phone);
+// 			localStorage.setItem("email", email);
+// 			localStorage.setItem("cab",cab);
+// 			localStorage.setItem("date",date);
+// 			localStorage.setItem("time",time);
+// 			localStorage.setItem("plocation",plocation);
+// 			localStorage.setItem("dlocation",dlocation);
+// 			localStorage.setItem("passenger",passenger);
+// 			localStorage.setItem("direction",direction);
 
 
 
@@ -186,6 +186,24 @@
 			alert("You have selected : " + selectedText);
 			return true;
 		}	
+		document.querySelectorAll('#bookingform input').forEach(e=>{
+                e.addEventListener('keyup', function(event){
+                var isValid = true;
+                if(!email.validity.valid){
+                    isValid = false;
+                }
+
+              
+
+                if(!isValid){
+                    btn.setAttribute('disabled', true)
+                }
+                else{
+                    btn.removeAttribute('disabled');
+                }
+            })
+        });
+	       
 
 
 
